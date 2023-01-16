@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RESTARANT MANAGMENT SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Cursive"}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("menu images/sample.jpg");
+  min-height:95%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-red w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-red w3-opacity w3-display-bottomright w3-padding">
+    <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+  </div>
+  <div class="w3-display-middle w3-center" >
+    <span class="w3-text-darkred w3-hide-small w3-padding w3-black w3-opacity" style="font-size:100px">Testy Bites</span>
+    <!--<span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>-->
+    <p><a href="#menu" class="w3-button w3-padding-large w3-red">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-dark-grey w3-padding-55 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:70px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'salads');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-40 w3-white">
+      <h1><img src="menu images/margherita_pizza.jpg" alt="pizza-margherita" width="100" height="100"><b> Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹399</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><img src="menu images/formaggio_pizza.jpg" alt="formaggio_pizza" width="100" height="100"><b> Formaggio</b><span class="w3-right w3-tag w3-dark-grey w3-round">₹419</span></h1>
+      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><img src="menu images/chiken_pizza.jpg" alt="chiken_pizza" width="100" height="100"><b> Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹499</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><img src="menu images/pineapple_pizza.jpg" alt="pineapple_pizza" width="100" height="100"><b> Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹229</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><img src="menu images/meat_town_pizza.jpg" alt="meat_town_pizza" width="100" height="100"><b> Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">₹579</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><img src="menu images/parma_pizza.jpg" alt="parma_pizza" width="100" height="100"><b> Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">₹599</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="salads" class="w3-container menu w3-padding-32 w3-white">
+      <h1><img src="menu images/Lasagna_salad.jpg" alt="Lasagna_salad" width="100" height="100"><b> Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">₹250</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><img src="menu images/ravioli_salad.jpeg" alt="ravioli_salad" width="100" height="100"><b> Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹150</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><img src="menu images/spaghetti_classica.jpg" alt="spaghetti_classica" width="100" height="100"><b> Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹215</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><img src="menu images/seafood_pasta.jpg" alt="seafood_pasta" width="100" height="100"><b> Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹650</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><img src="menu images/soup_starter.jpg" alt="soup_starter" width="100" height="100"><b> Today's Soup</b><span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">₹30</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><img src="menu images/bruschetta_starter.jpg" alt="bruschetta_starter" width="100" height="100"><b> Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹80</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><img src="menu images/garlicbread_starter.jpg" alt="garlicbread_starter" width="100" height="100"><b> Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><img src="menu images/Tomozzarella_starter.jpg" alt="Tomozzarella_starter" width="100" height="100"><b> Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">₹60</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-brown w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"><strong>About</strong></h1>
+    <p>The Pizza Restaurant was founded in 2011 by Mr.Mehta in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <div class="w3-row w3-center w3-hover-white">
+    <div class="w3-col s6">
+    <p><strong>The Chef:</strong> Mr.mehta</p>
+    <img src="menu images/chef.jpg" style="width:120px;height:120px;" class="w3-circle" alt="Chef">
+    </div>
+
+    <div class="w3-col s6">
+    <p><strong>We are proud of our interiors.</strong></p>
+    <img src="menu images/restaurant.jpg" style="width:40%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    </div>
+    </div>
+
+    <h1 class="w3-center"><b>Address</b></h1>
+    <div class="w3-row w3-center w3-hover-white">
+    <div class="w3-col s6 w3-padding-16"><a href="https://www.google.com/maps/d/viewer?gl=US&ie=UTF8&oe=UTF8&msa=0&t=m&z=14&vpsrc=0&err=1&mid=1FwJRQ0CrLfmmpfAmaseX-XfgZXk&ll=37.383229436946394%2C-122.08553144743928" class="w3-button w3-red">Check on Map</a></div>
+    <div class="w3-col s6">
+    <p class="w3-margin-center">Near Hotel Sandeep, Besides Kalika Mandir, Mumbai Naka, Nashik Nashik, Maharashtra 422001 India</p>
+    </div>
+    </div>
+
+    <h1 class="w3-center"><b>Opening Hours</b></h1>
+    <div class="w3-row w3-center w3-hover-white">
+      <div class="w3-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content w3-center">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px"><strong>Contact</strong></h1>
+    <p>Find us at some address at some place or call us at <span class="w3-hover-white">05050515-122330</span></p>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.<br><span class="w3-text-yellow">Welcome to always <strong>Testy Bites</strong></span></p>
+    <p class="w3-xxlarge"><strong class="w3-text-yellow">Reserve</strong> a table, ask for today's special or just send us a message:</p>
+
+
+    <form action="sampleconn.php" method="post">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" name="date" value="2022-05-18T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<!--<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></p>
+</footer>-->
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
